@@ -1,0 +1,15 @@
+@EndUserText: {
+  label: 'Service Def for ZC_CHETU_TRAVEL_93'
+}
+@ObjectModel: {
+  leadingEntity: {
+    name: 'ZC_CHETU_TRAVEL_93'
+  }
+}
+define service ZUI_CHETU_TRAVEL_93_O4
+  provider contracts odata_v4_ui {
+  expose ZC_CHETU_TRAVEL_93;
+  expose ZC_CHETU_BOOKNG_93;
+  expose ZC_CHETU_ATTACH_93;
+  expose ZC_CHETU_BOOKSP_93;
+}

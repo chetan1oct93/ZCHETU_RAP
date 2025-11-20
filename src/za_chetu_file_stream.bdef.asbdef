@@ -1,0 +1,6 @@
+abstract;
+strict;
+with hierarchy;
+define behavior for ZA_CHETU_FILE_STREAM
+{
+}
