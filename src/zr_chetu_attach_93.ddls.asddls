@@ -17,7 +17,7 @@ define view entity ZR_CHETU_ATTACH_93
       @Semantics.largeObject: { mimeType: 'MimeType',   //case-sensitive
                                 fileName: 'FileName',         //case-sensitive
                                 acceptableMimeTypes: ['image/png', 'image/jpeg', 'application/pdf'],
-                                contentDispositionPreference: #ATTACHMENT }
+                                contentDispositionPreference: #INLINE }
       attachment            as Attachment,
 
       mime_type             as MimeType,
