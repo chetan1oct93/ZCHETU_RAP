@@ -15,6 +15,16 @@
               measures: [ 'BookingFee' ],
               measureAttributes: [{ measure: 'BookingFee', role: #AXIS_1, asDataPoint: true }] }]
 
+@UI.selectionVariant: [{ qualifier: 'SV_All', text: 'All' },
+                       { qualifier: 'SV_Acc', text: 'Accepted', filter: 'OverallStatus EQ "A" '},
+                       { qualifier: 'SV_Opn', text: 'Open', filter: 'OverallStatus EQ "O" '}]
+//@UI.presentationVariant: [{ qualifier: 'PV_All', text: 'All',maxItems: 50, requestAtLeast: [ 'TravelId' ], visualizations: [{ type: #AS_LINEITEM }], selectionFieldsQualifier: 'All' },
+//                          { qualifier: 'PV_Acc', text: 'Accepted',maxItems: 50, requestAtLeast: [ 'TravelId' ], visualizations: [{ type: #AS_LINEITEM }], selectionFieldsQualifier: 'Accepted' },
+//                          { qualifier: 'PV_Opn', text: 'Open', maxItems: 50, requestAtLeast: [ 'TravelId' ], visualizations: [{ type: #AS_LINEITEM }], selectionFieldsQualifier: 'Open' }]
+//@UI.selectionPresentationVariant: [{ qualifier: 'SPV_All', text: 'All', selectionVariantQualifier: 'SV_All', presentationVariantQualifier: 'PV_All' },
+//                                   { qualifier: 'SPV_Acc', text: 'Accepted', selectionVariantQualifier: 'SV_Acc', presentationVariantQualifier: 'PV_Acc' },
+//                                   { qualifier: 'SPV_Opn', text: 'Open', selectionVariantQualifier: 'SV_Opn', presentationVariantQualifier: 'PV_Opn' }]
+
 annotate view ZC_CHETU_TRAVEL_93 with
 
 {
@@ -80,7 +90,7 @@ annotate view ZC_CHETU_TRAVEL_93 with
   TravelId;
 
   @UI.identification: [ { position: 20 } ]
-  @UI.lineItem: [ { position: 20, cssDefault.width: '20em' } ]
+  @UI.lineItem: [ { position: 20, cssDefault.width: '20em'  } ]
   @UI.selectionField: [ { position: 20 } ]
   AgencyId;
 
@@ -113,7 +123,7 @@ annotate view ZC_CHETU_TRAVEL_93 with
   @UI.lineItem: [ { position: 70, label: 'Total Price', cssDefault.width: '10em' } ]
   TotalPrice;
 
-  @UI.hidden : false
+  @UI.hidden: false
   CurrencyCode;
 
   @UI.identification: [ { position: 90, label: 'Description' } ]
