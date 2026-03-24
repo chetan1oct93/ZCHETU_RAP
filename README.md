@@ -47,6 +47,7 @@ File Structure
 
 
 Manifest.Json (update)
+```
 "controlConfiguration": {
                 "@com.sap.vocabularies.UI.v1.LineItem": {
                   "tableSettings": {
@@ -69,3 +70,4 @@ Manifest.Json (update)
                   }
                 }
               }
+```
