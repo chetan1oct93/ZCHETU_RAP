@@ -44,3 +44,28 @@ File Structure
 │   │   ├── Classes/  
 │   │   |	├── ZBP_C_CHETU_TRAVEL_93 - NOT REQUIRED  
 │   │   |	├── [ZBP_R_CHETU_TRAVEL_93](https://github.com/chetan1oct93/ZCHETU_RAP/blob/main/src/zbp_r_chetu_travel_93.clas.locals_imp.abap)  
+
+
+Manifest.Json (update)
+"controlConfiguration": {
+                "@com.sap.vocabularies.UI.v1.LineItem": {
+                  "tableSettings": {
+                    "type": "ResponsiveTable",
+                    "quickVariantSelection": {
+                      "paths": [
+                        {
+                          "annotationPath": "com.sap.vocabularies.UI.v1.SelectionVariant#SV_All"
+                        },
+                        {
+                          "annotationPath": "com.sap.vocabularies.UI.v1.SelectionVariant#SV_Acc"
+                        },
+                        {
+                          "annotationPath": "com.sap.vocabularies.UI.v1.SelectionVariant#SV_Opn"
+                        }
+                      ],
+                      "showCounts": true,
+                      "hideTableTitle": false
+                    }
+                  }
+                }
+              }
