@@ -739,7 +739,7 @@ CLASS lhc_zrchetubookng93 IMPLEMENTATION.
   METHOD UploadData.
     TYPES : BEGIN OF ty_sheet_data,
               SupplementId TYPE zr_chetu_booksp_93-SupplementId,
-              Price        TYPE c LENGTH 18, " zr_chetu_booksp_93-Price,
+              Price        TYPE c LENGTH 18, " zr_chetu_booksp_93-Price, Since packed decimal is not supported using char18
               CurrencyCode TYPE zr_chetu_booksp_93-CurrencyCode,
             END OF ty_sheet_data.
     DATA lt_sheet_data  TYPE STANDARD TABLE OF ty_sheet_data.
