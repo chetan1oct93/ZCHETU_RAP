@@ -739,7 +739,7 @@ CLASS lhc_zrchetubookng93 IMPLEMENTATION.
   METHOD UploadData.
     TYPES : BEGIN OF ty_sheet_data,
               SupplementId TYPE zr_chetu_booksp_93-SupplementId,
-              Price        TYPE zr_chetu_booksp_93-Price,
+              Price        TYPE c LENGTH 18, " zr_chetu_booksp_93-Price,
               CurrencyCode TYPE zr_chetu_booksp_93-CurrencyCode,
             END OF ty_sheet_data.
     DATA lt_sheet_data  TYPE STANDARD TABLE OF ty_sheet_data.
@@ -799,7 +799,7 @@ CLASS lhc_zrchetubookng93 IMPLEMENTATION.
                         %param    = supplement ) ).
 
     IF lt_failed IS NOT INITIAL.
-      APPEND VALUE #( %tky               = bookings[ 1 ]-%tky ) TO failed-zrchetubookng93.
+      APPEND VALUE #( %tky = bookings[ 1 ]-%tky ) TO failed-zrchetubookng93.
 
       APPEND VALUE #( %tky                 = bookings[ 1 ]-%tky
                       %msg                 = new_message_with_text( severity = if_abap_behv_message=>severity-error
