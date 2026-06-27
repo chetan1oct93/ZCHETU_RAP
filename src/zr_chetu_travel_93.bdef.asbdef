@@ -9,6 +9,7 @@ lock master
 total etag LastChangedAt
 authorization master ( global )
 etag master LocalLastChangedAt
+with additional save
 {
   field ( numbering : managed, readonly )
   TravelUuid;

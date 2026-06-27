@@ -1,3 +1,31 @@
+CLASS lsc_zr_chetu_travel_93 DEFINITION INHERITING FROM cl_abap_behavior_saver.
+
+  PROTECTED SECTION.
+
+    METHODS save_modified REDEFINITION.
+
+ENDCLASS.
+
+CLASS lsc_zr_chetu_travel_93 IMPLEMENTATION.
+
+  METHOD save_modified.
+
+  IF update-zrchetutravel93 IS NOT INITIAL.
+    LOOP AT update-zrchetutravel93 ASSIGNING FIELD-SYMBOL(<update_travel>).
+        IF <update_travel>-%control-Description = if_abap_behv=>mk-on.
+
+        TRY.
+              DATA(bgpf_process_name) = zbgpf_chetu_travel_93=>run_via_bgpf_tx_uncontrolled( i_rap_bo_entity_key = <update_travel>-%key ).
+            CATCH cx_bgmc INTO DATA(bgpf_exception).
+              "handle exception
+          ENDTRY.
+        ENDIF.
+    ENDLOOP.
+  ENDIF.
+  ENDMETHOD.
+
+ENDCLASS.
+
 CLASS lhc_ZrChetuTravel93 DEFINITION INHERITING FROM cl_abap_behavior_handler.
   PRIVATE SECTION.
     CONSTANTS:
